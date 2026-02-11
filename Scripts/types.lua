@@ -10,5 +10,4 @@
 ---@class ModConstants
 ---@field DEFAULT_QT_RTG_POWER number
 ---@field DEFAULT_RTG_POWER number
----@field MAX_ATTEMPTS number
----@field LOOP_DELAY_MS number
+---@field DELAY_MS number

@@ -22,7 +22,7 @@ local options = {
     -- https://astroneer.fandom.com/wiki/RTG
     RTG = {
         -- Power Production Rate in U/s (game default = 4)
-        NetPowerOutput = 4.0
+        NetPowerOutput = 8.0
     }
 }
 

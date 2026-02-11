@@ -46,24 +46,16 @@ local log = logging.new(LOG_LEVEL, MIN_LEVEL_OF_FATAL_ERROR)
 
 ---@param rtg ARTG_T1_BP_C|ARTG_Base_C
 local function onNewRTG(rtg, netPowerOutput)
-    local counter = 0
-    local loopHandle
-
-    loopHandle = LoopInGameThreadWithDelay(C.LOOP_DELAY_MS, function()
+    ExecuteWithDelay(C.DELAY_MS, function()
         local power = rtg.Power
 
         if power and power:IsValid() and type(rtg.Power.NetPowerOutput) == "number" then
-            log.debug("Set new power value: %s => %s. counter=%s", power.NetPowerOutput, netPowerOutput, counter)
+            log.debug("Set new power value: %s => %s.", power.NetPowerOutput, netPowerOutput)
             power.NetPowerOutput = netPowerOutput
-            CancelDelayedAction(loopHandle)
 
             return
-        end
-
-        counter = counter + 1
-        if counter >= C.MAX_ATTEMPTS then
-            log.warn("Unable to get the `Power.NetPowerOutput` property.")
-            CancelDelayedAction(loopHandle)
+        else
+            log.error("Unable to set the new power value to the object: " .. rtg:GetFullName())
         end
     end)
 end

@@ -10,6 +10,7 @@
 
 /todo.md
 
+*.code-workspace
 .vscode
 .secrets
 .env

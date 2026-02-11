@@ -1,8 +1,7 @@
 local C = {
     DEFAULT_QT_RTG_POWER = 1.0,
     DEFAULT_RTG_POWER = 4.0,
-    MAX_ATTEMPTS = 5,
-    LOOP_DELAY_MS = 500
+    DELAY_MS = 2000
 }
 
 return setmetatable(C, {
