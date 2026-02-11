@@ -1,11 +1,15 @@
 {
   "mods": {
     "BetterRTGMod": {
-      "latest_version": "0.1.0",
+      "latest_version": "0.1.1",
       "versions": {
         "0.1.0": {
           "download_url": "https://github.com/orax-Astroneer-mods/BetterRTGMod/releases/download/v0.1.0/000-BetterRTGMod-0.1.0_P.pak",
           "filename": "000-BetterRTGMod-0.1.0_P.pak"
+        },
+        "0.1.1": {
+          "download_url": "https://github.com/orax-Astroneer-mods/BetterRTGMod/releases/download/v0.1.1/000-BetterRTGMod-0.1.1_P.pak",
+          "filename": "000-BetterRTGMod-0.1.1_P.pak"
         }
       }
     }
